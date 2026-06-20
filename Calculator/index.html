@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="calculator">
+    <!-- Screen shows the running expression and the current value -->
+    <div class="screen">
+      <div class="expression" id="expression"></div>
+      <div class="output" id="output">0</div>
+    </div>
+
+    <div class="keys">
+      <button class="key key--function" data-action="clear">AC</button>
+      <button class="key key--function" data-action="delete">DEL</button>
+      <button class="key key--operator" data-action="operator" data-operator="/">÷</button>
+      <button class="key key--operator" data-action="operator" data-operator="*">×</button>
+
+      <button class="key" data-action="number">7</button>
+      <button class="key" data-action="number">8</button>
+      <button class="key" data-action="number">9</button>
+      <button class="key key--operator" data-action="operator" data-operator="-">−</button>
+
+      <button class="key" data-action="number">4</button>
+      <button class="key" data-action="number">5</button>
+      <button class="key" data-action="number">6</button>
+      <button class="key key--operator" data-action="operator" data-operator="+">+</button>
+
+      <button class="key" data-action="number">1</button>
+      <button class="key" data-action="number">2</button>
+      <button class="key" data-action="number">3</button>
+      <button class="key key--equals" data-action="equals" rowspan="2">=</button>
+
+      <button class="key key--zero" data-action="number">0</button>
+      <button class="key" data-action="decimal">.</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

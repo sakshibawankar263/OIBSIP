@@ -1,0 +1,174 @@
+/* ===========================================
+   Calculator Styles
+   =========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Manrope:wght@500;700&display=swap');
+
+:root {
+  --bg: #161a23;
+  --screen-bg: #0f1118;
+  --key-bg: #262c3b;
+  --key-hover: #313951;
+  --key-active: #3a4360;
+  --func-bg: #1f2533;
+  --func-text: #ff8a5b;
+  --operator-bg: #ff8a5b;
+  --operator-text: #161a23;
+  --operator-hover: #ff9d77;
+  --equals-bg: #5fd0a3;
+  --equals-hover: #76e0b5;
+  --equals-text: #0f1118;
+  --text-main: #f5f3ee;
+  --text-dim: #8a90a3;
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #1d2330 0%, #0d0f15 100%);
+  font-family: 'Manrope', sans-serif;
+  padding: 20px;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 380px;
+  background: var(--bg);
+  border-radius: 28px;
+  padding: 22px;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* ---------- Screen ---------- */
+
+.screen {
+  background: var(--screen-bg);
+  border-radius: var(--radius);
+  padding: 28px 20px 18px;
+  margin-bottom: 18px;
+  text-align: right;
+  overflow: hidden;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.expression {
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+  color: var(--text-dim);
+  min-height: 1.3rem;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.output {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: clamp(2rem, 9vw, 2.8rem);
+  color: var(--text-main);
+  white-space: nowrap;
+  overflow-x: auto;
+  margin-top: 4px;
+}
+
+/* ---------- Keypad ---------- */
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.key {
+  border: none;
+  border-radius: 14px;
+  background: var(--key-bg);
+  color: var(--text-main);
+  font-family: 'Space Mono', monospace;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 18px 0;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.08s ease;
+}
+
+.key:hover {
+  background: var(--key-hover);
+}
+
+.key:active {
+  background: var(--key-active);
+  transform: scale(0.96);
+}
+
+.key--function {
+  background: var(--func-bg);
+  color: var(--func-text);
+  font-size: 1rem;
+}
+
+.key--function:hover {
+  background: #2a3245;
+}
+
+.key--operator {
+  background: var(--operator-bg);
+  color: var(--operator-text);
+}
+
+.key--operator:hover {
+  background: var(--operator-hover);
+}
+
+.key--equals {
+  background: var(--equals-bg);
+  color: var(--equals-text);
+  grid-row: span 2;
+}
+
+.key--equals:hover {
+  background: var(--equals-hover);
+}
+
+.key--zero {
+  grid-column: span 2;
+}
+
+/* ---------- Responsive tweaks ---------- */
+
+@media (max-width: 420px) {
+  .calculator {
+    padding: 16px;
+    border-radius: 22px;
+  }
+
+  .key {
+    padding: 16px 0;
+    font-size: 1.15rem;
+  }
+
+  .screen {
+    padding: 22px 16px 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .keys {
+    gap: 8px;
+  }
+
+  .key {
+    padding: 13px 0;
+    font-size: 1rem;
+  }
+}
