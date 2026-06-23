@@ -9,3 +9,41 @@ body{
     background-color: #0f172a;
     color: white;
 }
+
+.hero{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg,#0f172a,#1e293b);
+}
+
+.hero-content{
+    max-width: 800px;
+}
+
+.hero-image{
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #facc15;
+    margin-bottom: 20px;
+}
+
+.hero h1{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero h2{
+    color: #facc15;
+    margin-bottom: 20px;
+}
+
+.hero p{
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
