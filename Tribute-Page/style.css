@@ -266,3 +266,73 @@ body{
     font-size: 0.9rem;
     color: #9ca3af;
 }
+
+@media (max-width: 768px){
+
+    .hero h1{
+        font-size: 2.2rem;
+    }
+
+    .hero h2{
+        font-size: 1.3rem;
+    }
+
+    .hero p{
+        font-size: 1rem;
+    }
+
+    .hero-image{
+        width: 180px;
+        height: 180px;
+    }
+
+    .about-container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img{
+        width: 250px;
+    }
+
+    .section-title{
+        font-size: 2rem;
+    }
+
+    .quote-text{
+        font-size: 1.4rem;
+    }
+
+    .timeline-container{
+        padding-left: 20px;
+    }
+
+    .timeline-item::before{
+        left: -32px;
+    }
+}
+
+@media (max-width: 480px){
+
+    .hero{
+        padding: 30px 20px;
+    }
+
+    .hero h1{
+        font-size: 1.8rem;
+    }
+
+    .hero-image{
+        width: 150px;
+        height: 150px;
+    }
+
+    .quote-text{
+        font-size: 1.2rem;
+    }
+
+    .achievement-card,
+    .legacy-card{
+        padding: 20px;
+    }
+}
