@@ -123,3 +123,55 @@ body{
     color: #d1d5db;
     line-height: 1.7;
 }
+
+.timeline{
+    padding: 100px 10%;
+    background-color: #111827;
+}
+
+.timeline-container{
+    max-width: 800px;
+    margin: auto;
+    border-left: 4px solid #facc15;
+    padding-left: 30px;
+}
+
+.timeline-item{
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-item::before{
+    content: "";
+    position: absolute;
+    left: -42px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background-color:#facc15;
+    border-radius: 50%;
+}
+
+.timeline-year{
+    display:inline-block;
+    background:#facc15;
+    color:#0f172a;
+    padding:8px 16px;
+    border-radius:20px;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+.timeline-content{
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+    border-left:4px solid #facc15;
+    line-height:1.8;
+    color:#d1d5db;
+    transition:0.3s;
+}
+
+.timeline-content:hover{
+    transform:translateX(8px);
+}
