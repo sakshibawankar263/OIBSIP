@@ -175,3 +175,66 @@ body{
 .timeline-content:hover{
     transform:translateX(8px);
 }
+
+.quote-section{
+    padding: 120px 10%;
+    background: linear-gradient(135deg,#0f172a,#1e293b);
+    text-align: center;
+}
+
+.quote-container{
+    max-width: 900px;
+    margin: auto;
+}
+
+.quote-mark{
+    font-size: 6rem;
+    color: #facc15;
+    line-height: 1;
+}
+
+.quote-text{
+    font-size: 2rem;
+    line-height: 1.8;
+    color: white;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+.quote-author{
+    color: #facc15;
+    font-size: 1.2rem;
+}
+
+.legacy{
+    padding: 100px 10%;
+    background-color: #111827;
+}
+
+.legacy-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 25px;
+}
+
+.legacy-card{
+    background-color: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.legacy-card:hover{
+    transform: translateY(-8px);
+}
+
+.legacy-card h3{
+    color: #facc15;
+    margin-bottom: 15px;
+}
+
+.legacy-card p{
+    color: #d1d5db;
+    line-height: 1.8;
+}
